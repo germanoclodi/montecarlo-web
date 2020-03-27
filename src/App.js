@@ -81,7 +81,7 @@ class App extends Component {
         outlier_cards: this.state.outlier_cards
       };
 
-      axios.post("https://montecarlo-api.herokuapp.com/montecarlo", { montecarlo_parameters })
+      axios.post("http://0.0.0.0:5000/montecarlo", { montecarlo_parameters })
         .then(res => {
           this.setState({ chart_values: res.data });
           this.setState({ loading: false });
